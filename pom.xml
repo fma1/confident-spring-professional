@@ -133,6 +133,6 @@
     </build>
 
     <modules>
-      <module>java-webapps-without-spring</module>
+        <module>java-webapps-without-spring</module>
     </modules>
 </project>
