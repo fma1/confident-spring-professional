@@ -23,6 +23,11 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jsr310</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.fasterxml.jackson.module</groupId>
                 <artifactId>jackson-module-scala_2.13</artifactId>
                 <version>${jackson.version}</version>
@@ -165,6 +170,6 @@
 
     <modules>
         <module>myfancypdfinvoices</module>
-        <module>myfancypdfinvoices-exercise</module>
+        <module>mybank</module>
     </modules>
 </project>

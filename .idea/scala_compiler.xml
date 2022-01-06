@@ -19,5 +19,11 @@
         <parameter value="$PROJECT_DIR$/myfancypdfinvoices-exercise/target/.scala_dependencies" />
       </parameters>
     </profile>
+    <profile name="Maven 4" modules="mybank">
+      <parameters>
+        <parameter value="-dependencyfile" />
+        <parameter value="$PROJECT_DIR$/mybank/target/.scala_dependencies" />
+      </parameters>
+    </profile>
   </component>
 </project>
