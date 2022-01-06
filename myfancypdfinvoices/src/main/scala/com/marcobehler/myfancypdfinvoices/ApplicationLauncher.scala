@@ -1,4 +1,4 @@
-package com.marcobehler
+package com.marcobehler.myfancypdfinvoices
 
 import com.marcobehler.myfancypdfinvoices.web.MyFirstServlet
 import org.apache.catalina.startup.Tomcat
