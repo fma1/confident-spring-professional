@@ -1,4 +1,4 @@
-package com.marcobehler
+package com.marcobehler.myfancypdfinvoices.model
 
 import java.util.UUID
 import scala.beans.BeanProperty

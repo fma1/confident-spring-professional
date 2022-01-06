@@ -1,6 +1,6 @@
-package com.marcobehler
+package com.marcobehler.myfancypdfinvoices.web
 
-import com.marcobehler.Application._
+import com.marcobehler.myfancypdfinvoices.context.Application._
 
 import javax.servlet.http.{HttpServlet, HttpServletRequest, HttpServletResponse}
 

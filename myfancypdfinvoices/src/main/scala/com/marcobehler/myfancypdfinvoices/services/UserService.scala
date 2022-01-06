@@ -1,4 +1,6 @@
-package com.marcobehler
+package com.marcobehler.myfancypdfinvoices.services
+
+import com.marcobehler.myfancypdfinvoices.model.User
 
 import java.util.UUID
 
