@@ -164,6 +164,7 @@
     </build>
 
     <modules>
-        <module>java-webapps-without-spring</module>
+        <module>myfancypdfinvoices</module>
+        <module>myfancypdfinvoices-exercise</module>
     </modules>
 </project>

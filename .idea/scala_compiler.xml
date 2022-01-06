@@ -10,7 +10,13 @@
     <profile name="Maven 2" modules="myfancypdfinvoices">
       <parameters>
         <parameter value="-dependencyfile" />
-        <parameter value="$PROJECT_DIR$/java-webapps-without-spring/target/.scala_dependencies" />
+        <parameter value="$PROJECT_DIR$/myfancypdfinvoices/target/.scala_dependencies" />
+      </parameters>
+    </profile>
+    <profile name="Maven 3" modules="myfancypdfinvoices-exercise">
+      <parameters>
+        <parameter value="-dependencyfile" />
+        <parameter value="$PROJECT_DIR$/myfancypdfinvoices-exercise/target/.scala_dependencies" />
       </parameters>
     </profile>
   </component>
