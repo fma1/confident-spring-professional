@@ -22,4 +22,6 @@ class InvoiceService(userService: UserService) {
         throw new IllegalStateException()
     }
   }
+
+  def getUserService: UserService = userService
 }
