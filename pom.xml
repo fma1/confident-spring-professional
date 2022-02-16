@@ -177,6 +177,6 @@
     <modules>
         <module>mod1-myfancypdfinvoices</module>
         <module>mod1-ex-mybank</module>
-        <module>mod2</module>
+        <module>mod2-myfancypdfinvoices</module>
     </modules>
 </project>

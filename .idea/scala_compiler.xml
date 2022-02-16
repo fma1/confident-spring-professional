@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="Maven 1" modules="mod1-ex-mybank">
-      <parameters>
-        <parameter value="-dependencyfile" />
-        <parameter value="$PROJECT_DIR$/mod1-ex-mybank/target/.scala_dependencies" />
-      </parameters>
-    </profile>
-    <profile name="Maven 2" modules="confident-spring-professional">
+    <profile name="Maven 1" modules="confident-spring-professional">
       <parameters>
         <parameter value="-dependencyfile" />
         <parameter value="$PROJECT_DIR$/target/.scala_dependencies" />
       </parameters>
     </profile>
-    <profile name="Maven 3" modules="mod1-myfancypdfinvoices">
+    <profile name="Maven 2" modules="mod1-ex-mybank">
+      <parameters>
+        <parameter value="-dependencyfile" />
+        <parameter value="$PROJECT_DIR$/mod1-ex-mybank/target/.scala_dependencies" />
+      </parameters>
+    </profile>
+    <profile name="Maven 3" modules="mod2">
+      <parameters>
+        <parameter value="-dependencyfile" />
+        <parameter value="$PROJECT_DIR$/mod2-myfancypdfinvoices/target/.scala_dependencies" />
+      </parameters>
+    </profile>
+    <profile name="Maven 4" modules="mod1-myfancypdfinvoices">
       <parameters>
         <parameter value="-dependencyfile" />
         <parameter value="$PROJECT_DIR$/mod1-myfancypdfinvoices/target/.scala_dependencies" />
-      </parameters>
-    </profile>
-    <profile name="Maven 4" modules="mod2">
-      <parameters>
-        <parameter value="-dependencyfile" />
-        <parameter value="$PROJECT_DIR$/mod2/target/.scala_dependencies" />
       </parameters>
     </profile>
   </component>
