@@ -13,7 +13,7 @@ class InvoiceService {
 
   @Autowired
   @BeanProperty
-  private var userService: UserService = _
+  var userService: UserService = _
 
   def findAll(): CopyOnWriteArrayList[Invoice] = {
     invoices
@@ -30,6 +30,4 @@ class InvoiceService {
         throw new IllegalStateException()
     }
   }
-
-  def getUserService: UserService = userService
 }
