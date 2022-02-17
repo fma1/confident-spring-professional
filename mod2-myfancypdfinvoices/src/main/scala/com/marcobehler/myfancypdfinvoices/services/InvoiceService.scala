@@ -1,11 +1,19 @@
 package com.marcobehler.myfancypdfinvoices.services
 
 import com.marcobehler.myfancypdfinvoices.model.Invoice
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Component
 
 import java.util.concurrent.CopyOnWriteArrayList
+import scala.beans.BeanProperty
 
-class InvoiceService(userService: UserService) {
+@Component
+class InvoiceService {
   private val invoices = new CopyOnWriteArrayList[Invoice]()
+
+  @Autowired
+  @BeanProperty
+  private var userService: UserService = _
 
   def findAll(): CopyOnWriteArrayList[Invoice] = {
     invoices
