@@ -1,17 +1,20 @@
 package com.marcobehler.myfancypdfinvoices.services
 
 import com.marcobehler.myfancypdfinvoices.model.Invoice
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
 
 import java.util.concurrent.CopyOnWriteArrayList
 import javax.annotation.{PostConstruct, PreDestroy}
+import scala.annotation.meta.beanSetter
 
 @Component
-class InvoiceService(userService: UserService) {
+class InvoiceService(userService: UserService, @Value("${cdn.url}") cdnUrl: String) {
   private val invoices = new CopyOnWriteArrayList[Invoice]()
 
   @PostConstruct
   def init(): Unit = {
+    println(cdnUrl)
     println("Printing PDF template from S3...")
     // TODO: Download from S3 and save locally
   }
@@ -31,7 +34,7 @@ class InvoiceService(userService: UserService) {
     Option(userService.findById(userId)) match {
       case Some(_) =>
         // TODO: real pdf creation and storing it on network server
-        val invoice = Invoice(userId = userId, amount = amount, pdfUrl = "http://www.africau.edu/images/default/sample.pdf")
+        val invoice = Invoice(userId = userId, amount = amount, pdfUrl = s"$cdnUrl/images/default/sample.pdf")
         invoices.add(invoice)
         invoice
       case None =>

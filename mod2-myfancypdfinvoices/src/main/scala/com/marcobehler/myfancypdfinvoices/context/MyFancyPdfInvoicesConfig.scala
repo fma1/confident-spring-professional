@@ -5,10 +5,11 @@ import com.fasterxml.jackson.module.scala.DefaultScalaModule
 import com.marcobehler.myfancypdfinvoices.ApplicationLauncher
 import com.marcobehler.myfancypdfinvoices.services.{InvoiceService, UserService}
 import org.springframework.beans.factory.config.ConfigurableBeanFactory
-import org.springframework.context.annotation.{Bean, ComponentScan, Configuration, Scope}
+import org.springframework.context.annotation.{Bean, ComponentScan, Configuration, PropertySource, Scope}
 
 @Configuration
 @ComponentScan(basePackageClasses = Array(classOf[ApplicationLauncher]))
+@PropertySource(Array("classpath:/application.properties"))
 class MyFancyPdfInvoicesConfig {
   @Bean
   def objectMapper: ObjectMapper = new ObjectMapper().registerModule(DefaultScalaModule)
