@@ -10,6 +10,8 @@ import org.springframework.context.annotation.{Bean, ComponentScan, Configuratio
 @Configuration
 @ComponentScan(basePackageClasses = Array(classOf[ApplicationLauncher]))
 @PropertySource(Array("classpath:/application.properties"))
+@PropertySource(value = Array("classpath:/application-${spring.profiles.active}.properties")
+  , ignoreResourceNotFound = true)
 class MyFancyPdfInvoicesConfig {
   @Bean
   def objectMapper: ObjectMapper = new ObjectMapper().registerModule(DefaultScalaModule)
