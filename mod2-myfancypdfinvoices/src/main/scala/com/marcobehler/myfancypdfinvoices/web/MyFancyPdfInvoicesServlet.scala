@@ -15,6 +15,9 @@ class MyFancyPdfInvoicesServlet extends HttpServlet {
 
   override def init(config: ServletConfig): Unit = {
     val ctx = new AnnotationConfigApplicationContext(classOf[MyFancyPdfInvoicesConfig])
+
+    ctx.registerShutdownHook()
+
     userService = ctx.getBean(classOf[UserService])
     invoiceService = ctx.getBean(classOf[InvoiceService])
     objectMapper = ctx.getBean(classOf[ObjectMapper])

@@ -1,11 +1,27 @@
 package com.marcobehler.myfancypdfinvoices.services
 
 import com.marcobehler.myfancypdfinvoices.model.Invoice
+import org.springframework.stereotype.Component
 
 import java.util.concurrent.CopyOnWriteArrayList
+import javax.annotation.{PostConstruct, PreDestroy}
 
+@Component
 class InvoiceService(userService: UserService) {
   private val invoices = new CopyOnWriteArrayList[Invoice]()
+
+  @PostConstruct
+  def init(): Unit = {
+    println("Printing PDF template from S3...")
+    // TODO: Download from S3 and save locally
+  }
+
+  // Will only run when shutdown gracefully, which is not the red IntelliJ button
+  @PreDestroy
+  def shutdown(): Unit = {
+    println("Deleting downloaded templates...")
+    // TODO: Actual deletion of files
+  }
 
   def findAll(): CopyOnWriteArrayList[Invoice] = {
     invoices
