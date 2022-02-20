@@ -19,3 +19,5 @@ object ApplicationLauncher {
     tomcat.start()
   }
 }
+
+class ApplicationLauncher {}
