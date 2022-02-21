@@ -31,6 +31,11 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
                 <version>${spring.version}</version>
             </dependency>
@@ -185,5 +190,6 @@
         <module>mod1-ex-mybank</module>
         <module>mod2-myfancypdfinvoices</module>
         <module>mod2-ex-mybank</module>
+        <module>mod3-myfancypdfinvoices</module>
     </modules>
 </project>
