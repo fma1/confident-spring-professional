@@ -3,9 +3,8 @@ package com.marcobehler.myfancypdfinvoices.context
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
 import com.marcobehler.myfancypdfinvoices.ApplicationLauncher
-import com.marcobehler.myfancypdfinvoices.services.{InvoiceService, UserService}
-import org.springframework.beans.factory.config.ConfigurableBeanFactory
 import org.springframework.context.annotation.{Bean, ComponentScan, Configuration, PropertySource, Scope}
+import org.springframework.validation.beanvalidation.MethodValidationPostProcessor
 import org.springframework.web.servlet.config.annotation.EnableWebMvc
 
 @Configuration
@@ -17,4 +16,8 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc
 class MyFancyPdfInvoicesConfig {
   @Bean
   def objectMapper: ObjectMapper = new ObjectMapper().registerModule(DefaultScalaModule)
+
+  // Needed for @RequestParam validation
+  @Bean
+  def methodValidationPostProcessor = new MethodValidationPostProcessor()
 }

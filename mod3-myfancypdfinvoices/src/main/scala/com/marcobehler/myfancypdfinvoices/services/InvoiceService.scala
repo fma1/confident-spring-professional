@@ -36,6 +36,7 @@ class InvoiceService(userService: UserService, @Value("${cdn.url}") cdnUrl: Stri
         // TODO: real pdf creation and storing it on network server
         val invoice = Invoice(userId = userId, amount = amount, pdfUrl = s"$cdnUrl/images/default/sample.pdf")
         invoices.add(invoice)
+        System.err.println(invoice)
         invoice
       case None =>
         throw new IllegalStateException()
