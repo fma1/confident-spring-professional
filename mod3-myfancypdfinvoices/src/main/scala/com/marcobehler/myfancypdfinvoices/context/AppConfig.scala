@@ -13,7 +13,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc
 @PropertySource(value = Array("classpath:/application-${spring.profiles.active}.properties")
   , ignoreResourceNotFound = true)
 @EnableWebMvc
-class MyFancyPdfInvoicesConfig {
+class AppConfig {
   @Bean
   def objectMapper: ObjectMapper = new ObjectMapper().registerModule(DefaultScalaModule)
 

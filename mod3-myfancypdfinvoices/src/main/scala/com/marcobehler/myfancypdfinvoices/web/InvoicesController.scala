@@ -11,7 +11,7 @@ import javax.validation.constraints.{Max, Min, NotBlank}
 
 @RestController
 @Validated
-class MyFancyPdfInvoicesController(invoicesService: InvoiceService) {
+class InvoicesController(invoicesService: InvoiceService) {
 
   @GetMapping(Array("/invoices"))
   def invoices(): JList[Invoice] = {

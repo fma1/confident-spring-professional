@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseStatus
 import javax.validation.ConstraintViolationException
 
 @RestControllerAdvice
-class GlobalControllerExceptionHandler {
+class GlobalExceptionHandler {
 
   @ResponseStatus(HttpStatus.BAD_REQUEST)
   @ExceptionHandler(Array(classOf[MethodArgumentNotValidException]))
