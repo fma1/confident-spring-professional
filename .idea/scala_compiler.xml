@@ -37,5 +37,11 @@
         <parameter value="$PROJECT_DIR$/mod3-myfancypdfinvoices/target/.scala_dependencies" />
       </parameters>
     </profile>
+    <profile name="Maven 7" modules="mod3-ex-mybank">
+      <parameters>
+        <parameter value="-dependencyfile" />
+        <parameter value="$PROJECT_DIR$/mod3-ex-mybank/target/.scala_dependencies" />
+      </parameters>
+    </profile>
   </component>
 </project>
