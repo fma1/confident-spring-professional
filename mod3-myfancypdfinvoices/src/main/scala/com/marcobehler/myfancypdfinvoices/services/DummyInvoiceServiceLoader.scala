@@ -11,7 +11,7 @@ class DummyInvoiceServiceLoader(invoiceService: InvoiceService) {
 
   @PostConstruct
   def setup(): Unit = {
-    println("Creating dev invoices...")
+    println("Creating dev transactions...")
     invoiceService.create("someUserId", 50)
     invoiceService.create("someOtherUserId", 50)
   }

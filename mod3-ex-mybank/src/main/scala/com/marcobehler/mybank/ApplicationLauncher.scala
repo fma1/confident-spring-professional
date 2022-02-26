@@ -8,6 +8,8 @@ import org.springframework.web.servlet.DispatcherServlet
 import javax.servlet.ServletContext
 
 object ApplicationLauncher {
+  System.setProperty("spring.profiles.active", "dev")
+
   final val TOMCAT_PORT: Int = System.getProperty("server.port", "8080").toInt
 
   def createApplicationContext(context: ServletContext): AnnotationConfigWebApplicationContext = {
