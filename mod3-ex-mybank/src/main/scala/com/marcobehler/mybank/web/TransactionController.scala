@@ -6,6 +6,7 @@ import com.marcobehler.mybank.services.TransactionService
 import org.springframework.web.bind.annotation.{GetMapping, PostMapping, RequestBody, RestController}
 
 import java.util.{List => JList}
+import javax.validation.Valid
 import scala.jdk.CollectionConverters._
 
 @RestController
@@ -17,7 +18,7 @@ class TransactionController(transactionService: TransactionService) {
   }
 
   @PostMapping(Array("/transactions"))
-  def createTransaction(@RequestBody transactionDTO: TransactionDTO): Transaction = {
+  def createTransaction(@RequestBody @Valid transactionDTO: TransactionDTO): Transaction = {
     transactionService.create(transactionDTO.amount, transactionDTO.reference)
   }
 }

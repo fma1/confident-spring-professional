@@ -10,6 +10,7 @@ import org.springframework.http.MediaType
 import org.springframework.http.converter.HttpMessageConverter
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
 import org.springframework.http.converter.xml.MappingJackson2XmlHttpMessageConverter
+import org.springframework.validation.beanvalidation.MethodValidationPostProcessor
 import org.springframework.web.servlet.config.annotation.{ContentNegotiationConfigurer, EnableWebMvc, WebMvcConfigurer}
 
 import java.util.{List => JList}
@@ -47,6 +48,9 @@ class AppConfig extends WebMvcConfigurer {
   def mappingJackson2XmlHttpMessageConverter(): MappingJackson2XmlHttpMessageConverter = {
     new MappingJackson2XmlHttpMessageConverter(xmlMapper)
   }
+
+  @Bean
+  def methodValidationPostProcessor = new MethodValidationPostProcessor()
 
   override def configureMessageConverters(converters: JList[HttpMessageConverter[_]]): Unit = {
     converters.add(mappingJackson2XmlHttpMessageConverter())
