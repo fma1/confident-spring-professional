@@ -43,5 +43,11 @@
         <parameter value="$PROJECT_DIR$/mod3-ex-mybank/target/.scala_dependencies" />
       </parameters>
     </profile>
+    <profile name="Maven 8" modules="mod4-myfancypdfinvoices">
+      <parameters>
+        <parameter value="-dependencyfile" />
+        <parameter value="$PROJECT_DIR$/mod4-myfancypdfinvoices/target/.scala_dependencies" />
+      </parameters>
+    </profile>
   </component>
 </project>

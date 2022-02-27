@@ -8,22 +8,6 @@ import org.springframework.web.bind.annotation.{ExceptionHandler, ResponseStatus
 import javax.validation.ConstraintViolationException
 import scala.jdk.CollectionConverters._
 
-/*
-@RestControllerAdvice
-public class GlobalExceptionHandler {
-
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler(ConstraintViolationException.class)
-    public ErrorDto handleConstraintViolation(ConstraintViolationException exception) {
-        List<String> invalidFields = exception.getConstraintViolations()
-                .stream()
-                .map(cv -> cv.getPropertyPath().toString())
-                .collect(Collectors.toList());
-        return new ErrorDto(exception.getMessage(), invalidFields);
-    }
-}
- */
-
 @RestControllerAdvice
 class GlobalExceptionHandler {
 
